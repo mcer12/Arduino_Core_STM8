@@ -5,6 +5,42 @@ menu.upload_method=Upload Method
 
 
 ################################################################################
+# Generic STM8S003
+
+Generic_8S003.name=Generic_STM8S003
+
+Generic_8S003.build.core=arduino
+Generic_8S003.build.board=Generic_8S003
+Generic_8S003.build.extra_flags=-d{build.product_line} {build.xSerial}
+
+# Generic_8S003 board
+# Support: Serial1 (USART2 on PD6, PD5)
+# EEPROM 128b = 8S003, 640b = 8S103
+Generic_8S003=Generic STM8S003F3
+Generic_8S003.device=STM8S003F3
+Generic_8S003.node=NODE_8S003
+Generic_8S003.upload.maximum_size=8192
+Generic_8S003.upload.maximum_data_size=1024
+Generic_8S003.build.mcu=8-bit
+Generic_8S003.build.board=Generic_8S003
+Generic_8S003.build.series=STM8Sxx
+Generic_8S003.build.splibraryPrefix=_StdPeriph_Driver
+Generic_8S003.build.product_line=STM8S003
+Generic_8S003.build.variant=STM8S003F3P6
+Generic_8S003.build.f_cpu=16000000
+
+Generic_8S003.menu.upload_method.MassStorage=Mass Storage
+Generic_8S003.menu.upload_method.MassStorage.upload.protocol=
+Generic_8S003.menu.upload_method.MassStorage.upload.tool=massStorageCopy
+
+Generic_8S003.menu.upload_method.stm8Flasher=stm8Flasher
+Generic_8S003.menu.upload_method.stm8Flasher.upload.protocol=stm8Tools
+Generic_8S003.menu.upload_method.stm8Flasher.upload.tool=stm8Flasher
+
+
+
+
+################################################################################
 # Nucleo 8S Board
 
 Nucleo_8S208RB.name=Nucleo_8S208RB
@@ -35,6 +71,11 @@ Nucleo_8S208RB.menu.upload_method.MassStorage.upload.tool=massStorageCopy
 Nucleo_8S208RB.menu.upload_method.stm8Flasher=stm8Flasher
 Nucleo_8S208RB.menu.upload_method.stm8Flasher.upload.protocol=stm8Tools
 Nucleo_8S208RB.menu.upload_method.stm8Flasher.upload.tool=stm8Flasher
+
+
+
+
+
 ################################################################################
 # Nucleo 8L Board
 
